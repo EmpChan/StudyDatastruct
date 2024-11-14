@@ -1,0 +1,255 @@
+# Quality란?
+- 이용자의 요구를 맞추기 위한 소프트웨어 상품의 능력
+	- ISO 피셜 - 명시적이거나 묵시적인 요구사항을 충족시키는지와 고나련된 속성과 특성의 합
+- 하지만 Quality는 절대적이지 않고 다차원적이다.
+- 또 Quailty는 대상에게 제약적이고 적절한 타협이 가능하다.
+- Quality 위기는 독립적이지 않다. 
+
+- 품질을 올려 얻기 위한 목표
+	- 품질과 생산성을 향상
+	- 시스템의 질과 생산성을 향상
+	- 비즈니스적으로 퍼포먼스를 향상하기
+# Quality 식별 
+## Quality의 분류
+- 외적 또는 내적 Quality
+- Product와 Process의 Quality 
+
+## 외적 Quality와 내적 Quality 
+- 구분이 명확하진 않다. 
+- 외적 Quality - 시스템에서 사용자에게 가시적인 부분 
+- 내적 Quality - 시스템에서 개발자에게 염려되는 부분
+
+## Product 와 Process의 Qualities
+- SW Product를 만들기 위한 process와 밀접하게 관련되어 있음.
+### Product Quality
+- Functionality
+- Usability
+- Efficiency
+- Reliability, etc
+### Process Quality
+- 방법과 도구의 영향력
+- standard의 사용 
+- 관리방법, etc
+
+
+# Quality의 종류 
+## Correctness 
+- 프로그램이 명세된 기능을 얼마나 잘 따라가고 있는지에 대한 Quality다.
+- ex) 프로그램이 명세된 기능을 충족하는지 알 수 있다. 
+	- correctness를 충족한다. 
+## Reliability
+- Dependability라고도 한다. 
+- product의 실패의 주기와 심각성을 측정하는 Quality임.
+### 실패 (Failure)
+- 운영 상태에서 허락되지 않는 행동이나 영향을 하는 것 
+- MTTF와 MTBF로 평가할 수 있음. 
+#### MTTF (Mean Time To Failure)
+- failure가 수리되고 다음 failure가 발생하기 까지의 주기 
+#### MTBF (Mean Time Between Failure)
+- failure가 발생하고 다음 failure가 발생하기 까지의 주기 
+
+## Robustness (견고성) 
+- 요구사항에서 기대되던 상황이 아닌 경우에서도 논리적으로 시스템이 행동해야 함.
+- 다시말해 모순이 없는 상태를 유지함. 
+- 다음과 같은 상황들에 대해 생각해보아야 함. 
+	- 운영 조건에서의 범위
+	- 유효한 입력에서 받아들일수 없는 결과가 나올 가능성
+	- 유효하지 않은 입력이 주어졌을 때 영향의 허용성
+- Robustness > Reliability > Correctness
+
+## Performance (성능)
+- 공간, 시간 면에서 효율성과 동일함. 
+- 시스템의 사용성과 관련되어 있음. 
+- process에 Performance를 적용하면 Productivity가 됨. 
+### 측정 시기
+- 프로그램을 만들기 전에 측정함. 
+### 평가 방법
+- Measurement (측정)
+	- 모니터링과 같은 방법으로 실제로 측정
+- Analysis (분석)
+	- 수학에 기반하여 코드 분석 
+- Simulation 
+	- 수학에 기반한 프로토타이핑 
+
+## User Friendliness (이용자 친화성) 
+- 사용 편의성을 의미함. 
+- 시스템이 개인 환경에서 적용되고 구성되는 것에 대한 편의성
+
+## Verifiability (확인성)
+- 시스템의 특성이 안전하게 검증될 수 있다면 검증가능하다.
+- 전형적인 분석 방법이나 테스팅을 통해 측정됨.
+
+## Maintainability (유지 보수성)
+-  유지해야 하는 것들
+	- Corrective (정확) - Fixing error
+	- Adaptive (적응) - platform change 
+	- Perfective (완전) - 코드 재구성 
+	- Preventive (예방) - 군에서 많이 함 
+
+- 요새는 적응/ 진화의 관점으로 변화하고 있음.
+	- 새 기술의 등장이 빠르고 환경이 자주 바뀌기 때문
+
+### Repairability (수정 가능성)
+- 주어진 시간안에 고칠 수 있다면 수정 가능하다고 정의함. 
+- 올바른 모듈화는 Repairability를 향상시킴
+- 적절한 모듈화는 컴퓨터 공학의 Availability, Serviceability를 결정함. 
+- HW의 Repairability는 부품을 갈아 끼울 수 있는가임. 
+- SW의 Repairability는 소스를 수정하는 것임. 
+
+### Evolvability (진화성)
+- 소프트웨어는 시간이 지날수록 수정됨.
+	- 새 기능을 제공하기 위함
+	- 이미 존재하는 기능을 변경하기 위함. 
+- 크고 복잡한 소프트웨어일수록 중요한 특성임. 
+- 적절한 모듈화를 통해 달성할 수 있음. 
+- 새 버전의 릴리즈가 생길수록 진화성이 작아짐. 
+- 문서와 도구가 적절하게 필요함.
+- 소프트웨어 구성 요소들에 대한 정의도 필요함.
+	- 일반적인 구성요소 (constant)
+	- 가변적인 구성요소 (not constant)
+
+## Reusability (재사용성)
+- 새 제품을 만들기 위해 이미 존재하는 것들을 사용
+### 재사용 단계
+1. 사람들(지식, 경험)
+2. 요구사항
+3. Design pattern
+4. Code
+### 또 다른 단계
+1. Module
+2. Function
+3. Program
+4. SW
+5. Service
+### 재사용의 적용 과정
+1. SW 방법 - fullset, simple, light-weight
+2. Life cycle model
+
+## Portability (이식성)
+- 모듈화에 의해 달성될 수 있음.
+- HW, SW 환경에 맞추어 잘 동작할 수 있는지 확인함. 
+
+## Understandability (이해성)
+- 상품 내적인 Quality
+- 추상화와 모듈화를 강화함. 
+- 개발자의 관점에서의 이야기임.
+
+## Interoperability (상호 운용성)
+- 다른 시스템과 상호 존재 및 상호 운용되기 위한 능력임. 
+- 인터페이스 표준화를 통해 달성할 수 있음.
+- 개방형 시스템 개념임.
+
+## Productivity (생산성)
+- 생산 절차에서의 효율성과 성능을 나타내는 Quality
+- 평가하기 어려움 
+### 평가 방법 
+- SLOC - simple(Source line of Code)
+- FP - 기능 기반 (Function Point)
+
+## Timeliness (적시성)
+- 제 시간안에 제품을 만들어 내는 능력
+- 점진적 배포를 통해 문제 해결이 가능함. 
+### 요구사항 
+- 조심스러운 스케줄링 
+- 정확한 업무 파악(견적내기)
+- 명확한 명세 마일스톤
+
+## Visibility (가시성)
+- 각 단계와 최근 상태가 문서화 되어 있는지에 대한 Quality
+- 요구사항 명세서나 설계 명세서를 통해 확인할 수 있음. 
+- 협업을 할 때 의사결정에 있어서 가이드라인이 되어주기도 함. 
+### Transparency
+- Project 관점에서 외부의 검사로부터 현재의 단계나 상태를 알 수 있는 성질
+### Visible 하다는것은..
+- 구조적으로 모듈화가 잘 되어있어야 함. 
+- 명료하게 이해 가능한 기능들
+- 이용가능하고 정호가한 문서
+
+## Security (보안성)
+- 악의적인 공격이나 다른 해커의 위험으로부터 소프트웨어를 보호하기위한 아이디어를 구현한 것 
+- 무결성, authentication, availability를 제공해야 함. 
+### 보안 취약성
+- Accessible - 그냥 접근
+- Exploitable - 무언가 데미지를 줌. 
+### 보안성의 척도
+- Security risk 
+- Security vulnerabilities
+- incident statistics
+
+## Safety (안전성)
+- SW Hazards로 부터 안전한 성질. 
+	- 사고의 전제조건이 될 수 있는 SW의 상태, 조건으로부터 자유로움
+- hardzards가 일어날 수 있는 상황을 피하는 것과 안전하지 못한 상황에 시스템이 진입 했을 때 안전해질 수 있도록 대체하는 것을 염려해야 함. 
+- 사고로는 죽음 부상 질병 한경적 데미지 등이 있음. 
+- 예를들어 핵 발전소의 소프트웨어 시스템의 경우 Safety를 중시해야 함.
+### 측정 방법
+- 요구사항 명세에 safety 관련 명세가 얼마나 있는지 확인
+- Safety guard가 얼마나 많이 구현되어 있는지?
+	- Safety guard는 harzard의 전제조건이 발생 했을 때 예방할 수 있도록 하는 것임.
+
+# Quality Requirements on Systems 
+## Information System 
+- 데이터를 저장하고 검색함. 
+- 예 : 은행 시스템, 도서관- 카탈로깅 시스템 
+### Qualities 
+- Data integrity - 데이터 무결성
+- Security - 보안성
+- Data availability - 데이터 이용가능성
+- Transaction performance - 트랜잭션 성능
+- User friendliness
+## Real-time Systems
+- 정해진 시간안에 동작이 실행되어야 하는 시스템 
+- 예 : 공장-모니터링 시스템 미사일 유도 시스템
+- Control-oriented 시스템
+- OS 레벨에서 스케줄링을 함.
+	- Deadline
+	- Priority 
+### Qualities
+- Respond time requirements (반응 시간 요구사항)
+- Safety (안전성)
+## Distributed System
+- 병렬성과 상호 통신을 가진 시스템으로 Task allocation과 Partitioning이 중요함. 
+- 분할 가능한 업무들
+	- Data
+	- Control
+	- Hardware
+- 예 : client/server 시스템의 미들웨어, 그룹웨어 
+### Qualities
+- System availability
+- Code mobility
+## Embedded System
+- 소프트웨어는 많은 구성요소 중 하나임.
+- 보통 UI가 없거나 매우 제한적임. 
+### Qualities
+- Reliability (신뢰성)
+- Adaptability (적응성)
+- Memory and performance efficiency (메모리와 성능 효율성)
+
+## Quality Factors for AI/ML System
+- 근본적으로 기존 SW 시스템과는 다름. 
+- 입력과 결과가 중요함.
+- ML의 구성요소들은 여러 관점에서의 접근 방법이 필요함. 
+- 알고리즘같은 것보다 트레닝에 사용되는 데이터 셋이 중요함. 
+- 모듈화, 캡슐화 등의 원칙은 크게 중요하지 않음. 
+
+### Model View
+- 모델선정 적합성
+- 데이터 처리 모델 적합성
+- 견고성 - 학습하지 않은 데이터에 대해서도 결과를 낼 수 있는가?
+- 공정성 - 편향된 학습을 해선 안된다.
+### Data View 
+- 대표성 - 데이터가 현재 원하는 집단을 나타내는가?
+- 정확성 - 오류 데이터가 얼마나 많이 들어 있는가?
+- 완결성 - 누락 데이터가 얼마나 많이 들어 있는가?
+- 학습 데이터 - 테스트 데이터 상호 독립성 - 둘이 잘 분리되었는가?
+### System View
+- 효율성 - 학습을 위해 필요한 리소스들을 처리할 수 있는가?
+- 시스템 구성성 - 입력과 결과를 잘 처리할 수 있는가?
+### Infra View
+- 리소스와 관련된 관점
+- 효율성 - 가진 자원을 잘 활용하고 있는가?
+- 적합성 - 학습모델에 적합한 자원을 가지고 있는가?
+### Environment View
+- 환경 영향성 - real-world의 자연 환경에 영향을 주나..?
+- 사회 영향성 - 사회적 파급 
+# Standards for SW Quality
